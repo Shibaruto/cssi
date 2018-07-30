@@ -15,13 +15,42 @@
 // Task 1
 let dogName1 = "Steve";
 let dogType1 = "beagle";
-
+if (dogtype1 === 'corgi') {
+console.log ("I will walk Steve today at 12:00pm");
+}
+else {
+  console.log ("I will walk Steve today at 1:00pm");
+}
+if (dogtype == beagle) {
+  console.log ("I will walk Steve today at 12:00pm")
+}
+if (dogtype == bulldog) {
+  console.log ("I will walk Steve today at 1:00pm")
+}
+else {
+  console.log ("I will walk Steve today at 2:00pm")
+}
 // Complete Task 1 Below
 
 
 
 let dogName2 = "Joe";
 let dogType2 = "bulldog";
+if (dogtype2 === 'corgi') {
+console.log ("I will walk Joe today at 12:00pm");
+}
+else {
+  console.log ("I will walk Joe today at 1:00pm");
+}
+if (dogtype == beagle) {
+  console.log ("I will walk Joe today at 12:00pm")
+}
+if (dogtype == bulldog) {
+  console.log ("I will walk Joe today at 1:00pm")
+}
+else {
+  console.log ("I will walk Joe today at 2:00pm")
+}
 
 // Complete Task 2 Below
 
@@ -29,5 +58,19 @@ let dogType2 = "bulldog";
 
 let dogName = "Lola";
 let dogType = "poodle";
-
+if (dogtype === 'corgi') {
+console.log ("I will walk Lola today at 12:00pm");
+}
+else {
+  console.log ("I will walk Lola today at 1:00pm")
+}
+if (dogtype == beagle) {
+  console.log ("I will walk Lola today at 12:00pm")
+}
+if (dogtype == bulldog) {
+  console.log ("I will walk Lola today at 1:00pm")
+}
+else {
+  console.log ("I will walk Lola today at 2:00pm")
+}
 // Complete Task 3 Below
