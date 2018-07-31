@@ -15,11 +15,12 @@
 let customer_name;
 let balance;
 
-function openAccount(name){
-  balance = 0;
+function openAccount(name,balance = 100){
+  mybalance = balance;
   // Set the value for customer_name equal to name below
-
-  return //write the statment you need to return here
+customer_name = name;
+return name + " Has opened a new account with a balance of $" + mybalance;
+//write the statment you need to return here
 }
 
 function deposit(value){
@@ -34,3 +35,4 @@ function withdraw(/*argument here*/){
 
 // Write your script below
 console.log("script is running...");
+console.log(openAccount("James","1000"));
