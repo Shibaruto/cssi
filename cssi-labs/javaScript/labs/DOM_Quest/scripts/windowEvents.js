@@ -16,8 +16,14 @@ console.log("Running Window Events Script");
 window.addEventListener("keypress", e=> {
 console.log(e.keyCode);
 
-
 })
+function bot(){
+  let kp = document.querySelector('div');
+let s = 100;
+s / 2;
+kp.style.width = s + 'px';
+kp.style.height = s + 'px';
 
+}
 
 // insert a function that prints out the key code of a key pressed
