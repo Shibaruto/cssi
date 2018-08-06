@@ -15,7 +15,25 @@
 // Use querySelector to store the div in a variable.
 let redButton = document.querySelector('#red');
 
-// Use addEventListener to respond to a click event.
+let color = document.querySelector('#responseBox');
 redButton.addEventListener('click', (e) => {
   console.log("You clicked the red button!");
-})
+  color.style.backgroundColor = 'red';
+  color.innerHTML = 'red';
+});
+
+let col = document.querySelector('#responseBox');
+let greenbutton = document.querySelector('#green');
+greenbutton.addEventListener('click',() => {
+  console.log("you've clicked the green button!");
+  col.style.backgroundColor = 'green';
+  col.innerHTML = 'green';
+});
+
+let colo = document.querySelector('#responseBox');
+let bluebutton = document.querySelector('#blue');
+bluebutton.addEventListener('click', () => {
+  console.log("you've clicked the blue button!");
+  colo.style.backgroundColor = 'blue';
+  colo.innerHTML = 'blue';
+});
