@@ -17,17 +17,43 @@
 choice = ""
 
 print("Welcome to the shopping list app!")
-
-shopping_list = []
-
+#shop_list = []
+shop_list = ['egg', 'cake', 'icecream', 'juice', 'cookie', 'soda', 'ice', 'chips']
+# print shop_list
+# a = ()
+# b = ()
+# c = ()
+# d = ()
+# e = ()
+if choice == "e":
+     print("Program Terminated:")
 while choice.lower() != "e":
+    print ("                                               ")
     print("Please choose your action from the following list:")
     print("a. Add an item to the list")
     print("b. Remove an item from the list")
     print("c. Check to see if an item is on the list")
     print("d. Show all items on the list")
     print("e. exit")
-    
-    choice = input("Enter your choice [a|b|c|d|e]:")
-    
-    # Your code below! Handle the cases when the user chooses a, b, c, d, or e
+    print ("                                               ")
+
+    choice = raw_input("Enter your choice [a|b|c|d|e]:")
+    if choice == "a":
+        x = raw_input("Enter to add items: ")
+        shop_list.append(x)
+    elif choice == "b":
+        o = raw_input("Enter to remove item: ")
+        shop_list.remove(o)
+    elif choice == "c":
+        v = raw_input("Enter to check item: ")
+        if v in shop_list:
+              print("items are there: \n")
+        else:
+            print("not there:")
+    elif choice == "d":
+        print("The items in the list are: \n")
+        for i in shop_list:
+            print(i)
+
+
+        # Your code below! Handle the cases when the user chooses a, b, c, d, or e
