@@ -37,6 +37,18 @@ def get_highest_words(counts_dictionary, count):
 
 
 content = read_process_data()
-
+stop_words = list(get_stop_words()) 
+print content
 # Write your solution below!
+word_count = {}
 
+words = content.split(" ")
+
+for word in words:
+    if word_count.has_key(word):
+        word_count[word] = word_count[word] + 1
+    else:
+        if word != "" and word not in stop_words:
+            word_count[word] = 1
+
+get_highest_words(word_count,10)
