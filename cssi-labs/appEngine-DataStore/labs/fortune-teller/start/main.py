@@ -34,7 +34,13 @@ import webapp2
 import os
 import random
 import jinja2
+from google.appengine.api import urlfetch
+import urllib
+import json
 
+URL =  'https://www.googleapis.com/customsearch/v1?'
+KEY = 'AIzaSyCqC7xJFDT2X5vCrxw9BgsyHf-rjtOXHW0'
+CX = '015046563569302769055:tumc1bjjacc'
 
 def get_fortune():
     #add a list of fortunes to the empty fortune_list array
@@ -81,12 +87,26 @@ class FortunestartHandler(webapp2.RequestHandler):
         end_template = jinja_current_directory.get_template('templates/fortune-results.html')
         self.response.write(end_template.render(my_dic))
 
+class simpleURLFetcher(webapp2.RequestHandler):
+
+    def get(self):
+        query = 'cat'
+        query_params = {'key': KEY, 'cx': CX, 'q': query}
+        result = urlfetch.fetch(URL + urllib.urlencode(query_params))
+        
+        if result.status_code == 200:
+            self.response.write(result.status_code)
+            self.response.write(result.content)
+        else:
+            self.response.write(result.status_code)
+
 
 #the route mapping
 app = webapp2.WSGIApplication([
     #this line routes the main url ('/')  - also know as
     #the root route - to the Fortune Handler
     ('/', FortunestartHandler),
+    ('/simple', simpleURLFetcher)
     # ('/predict', FortunestartHandler),
     # ('/farewell', GoodbyeHandler) #maps '/predict' to the FortuneHandler
 ], debug=True)

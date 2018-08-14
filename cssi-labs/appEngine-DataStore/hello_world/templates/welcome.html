@@ -11,10 +11,12 @@
     <h1> hello Brooklyn</h1>
     {% endif %}
     <br/>
-    {% for c in city %}
-      Best city is: {{ c }} <br/>
+    <hr/>
+      {% for item in query_result %}
+         {{ item.firstname }} is {{ item.lastname}} <br/>
       {% endfor %}
 
+    <hr/>
     <img height="100px" width="150px" src="{{url}}" alt="nyc">
     <h2>Welcome to my New York</h2>
     <form action="/showresults" method="POST">
