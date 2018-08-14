@@ -93,7 +93,7 @@ class simpleURLFetcher(webapp2.RequestHandler):
         query = 'cat'
         query_params = {'key': KEY, 'cx': CX, 'q': query}
         result = urlfetch.fetch(URL + urllib.urlencode(query_params))
-        
+
         if result.status_code == 200:
             self.response.write(result.status_code)
             self.response.write(result.content)
